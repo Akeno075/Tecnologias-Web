@@ -7,7 +7,12 @@
     numeros.push('a');
     numeros.push(11);
 
-    
+    numeros.push(12);
+    console.log(numeros);
     console.log({numeros});
+
+    const nombres= ['Juan', 'Pedro', 'Maria', 'Jose', 'Luis']; //Arreglos sin tipo
+    const nombres2:string[] = ['Juan', 'Pedro', 'Maria', 'Jose', 'Luis'];    //Arreglos con tipo
+
 
 })();
