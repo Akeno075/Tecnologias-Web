@@ -6,7 +6,6 @@ interface Planet {
     weight: number;
 }
 
-// Primer objeto planet
 let planet1: Planet = {
     name: "Earth",
     galaxy: "Milky Way",
@@ -21,7 +20,6 @@ console.log("Planet weight :- " + planet1.weight);
 
 console.log("-------------------CODIGO 4---------------------------");
 
-// Segundo objeto planet Codigo 4
 let planet2: Planet = {
     name: "Mars",
     galaxy: "Milky Way",
