@@ -28,6 +28,5 @@ let planet2: Planet = {
 };
 
 for (let prop in planet2) {
-    // Se fuerza el acceso dinámico a las propiedades con indexación
     console.log("Planet " + prop + " :- " + (planet2 as any)[prop]);
 }
