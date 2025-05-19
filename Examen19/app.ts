@@ -23,18 +23,27 @@
     function activar_batiseñal(){
       return 'activada';
     }
+const activarBatiseñal = (): string => 'activada';
+((): void => {
+  console.log(activarBatiseñal());
+})();
 
   
     function pedir_ayuda(){
       console.log('Auxilio!!!');
     }
+
+const pedirAyuda = (): void => console.log('¡Auxilio!!!');
+((): void => {
+pedirAyuda();
+})();
   
     // Aserciones de Tipo
-    const poder: any = '100';
-    const largoDelPoder:number = poder.length;
-    console.log( largoDelPoder );
-  
-  
+((): void => {
+  const poder: any = '100';
+  const largoDelPoder: number = (poder as string).length;
+  console.log(largoDelPoder);
+})();
   })()
   
   
