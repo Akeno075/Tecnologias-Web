@@ -26,11 +26,11 @@ const bumblebee:Automovil = {
 
  type Villano = {
   nombre: string;
-  edad: number;
+  edad?: number;
   mutante: boolean;
  }
 // Villanos debe de ser un arreglo de objetos personalizados
-const villanos = [{
+const villanos:Villano[] = [{
   nombre:"Lex Luthor",
   edad: 54,
   mutante:false
@@ -69,9 +69,8 @@ const apocalipsis = {
   lider:true,
   miembros: ["Magneto","Tormenta","Psylocke","Angel"]
 }
-
 // Mystique, debe poder ser cualquiera de esos dos mutantes (charles o apocalipsis)
-type Mystique = Charles | Apocalipsis;
+type mystique = Charles | Apocalipsis;
 // Mystique es un tipo que puede ser Charles o Apocalipsis
 let mystique;
 
