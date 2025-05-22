@@ -1,5 +1,5 @@
 (() => {
-    console.log("------ Comprobación de Clases ------");
+    console.log("------ Clases de Hotel ------");
 
     // Clase Manager
     class Manager {
