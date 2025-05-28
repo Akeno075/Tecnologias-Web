@@ -31,3 +31,8 @@ export function identity<Type>(arg: Type): Type {
 //https://www.typescriptlang.org/docs/handbook/2/generics.html
  
 
+export const obtenerPrimero = <T>(elementos: Array<T>): T => {
+  return elementos[0];
+};
+
+//https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#arrays
