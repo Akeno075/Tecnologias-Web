@@ -1,5 +1,5 @@
 
-import {funcionGenericaFlecha2, funcionGenerica, imprimirObjeto, cuidar, identity } from "./genericos/genericos";
+import {funcionGenericaFlecha2, funcionGenerica, imprimirObjeto, cuidar, identity, obtenerPrimero } from "./genericos/genericos";
 
 //imprimirObjeto({ nombre: "Juan", edad: 30 });
 //imprimirObjeto("Hola, mundo!");
@@ -29,4 +29,6 @@ console.log(cuidar([1, 2, 3, 4, 5]));
 
 console.log(identity(3.1416).toFixed(2));
 console.log(identity("Hola, mundo!").charAt(0));
+
+console.log(obtenerPrimero([1, 2, 3, 4, 5]));
 
