@@ -24,6 +24,8 @@ isPrime(numberToCheck)
 runGreeting();
 
 
+// Importando la función registerUser desde el archivo Async.ts
+// Registro de usuario con Async/Await
 async function run() {
   const username = "Carlos";
 
