@@ -1,34 +1,38 @@
+// Importando la función isPrime desde el archivo Promise.ts
+import { isPrime } from "./Async & Await/Promise";
+import { greet } from "./Async & Await/Await";
+import { registerUser } from "./Async & Await/Async";
 
-import {funcionGenericaFlecha2, funcionGenerica, imprimirObjeto, cuidar, identity, obtenerPrimero } from "./genericos/genericos";
+const numberToCheck = 2;
 
-//imprimirObjeto({ nombre: "Juan", edad: 30 });
-//imprimirObjeto("Hola, mundo!");
-//imprimirObjeto(42);
-//imprimirObjeto(new Date());
-//imprimirObjeto({
-   // a:1,
- //   b: 2,
-   // c: 3,
-//})
+// Usando Promesas con .then/.catch
+isPrime(numberToCheck)
+  .then((message) => {
+    console.log("Mensaje:", message);
+  })
+  .catch((error) => {
+    console.error("Error:", error.message);
+  });
 
-console.log(funcionGenerica(3.1416) );
-console.log(funcionGenerica("Hola, mundo!"));
-console.log(funcionGenerica({ nombre: "Juan", edad: 30 }));
-console.log(funcionGenerica([1, 2, 3, 4, 5]));
-
-
-console.log(funcionGenericaFlecha2(3.1416).toFixed(2));
-console.log(funcionGenericaFlecha2("Hola, mundo!").charAt(0));
-
-
-
-console.log(cuidar(new Date()));
-console.log(cuidar({ nombre: "Juan", edad: 30 }));
-console.log(cuidar([1, 2, 3, 4, 5]));
+// Usando Async/Await
+  async function runGreeting() {
+  console.log("Tiempo de espera de 5 segundos para el saludo...");
+  const message = await greet("Carlos");
+  console.log(message);
+}
+// Ejecutando la función de saludo
+runGreeting();
 
 
-console.log(identity(3.1416).toFixed(2));
-console.log(identity("Hola, mundo!").charAt(0));
+async function run() {
+  const username = "Carlos";
 
-console.log(obtenerPrimero([1, 2, 3, 4, 5]));
+  try {
+    const message = await registerUser(username);
+    console.log(message);
+  } catch (error) {
+    console.error("Error:", (error as Error).message);
+  }
+}
 
+run();
