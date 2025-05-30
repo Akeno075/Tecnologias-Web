@@ -11,11 +11,14 @@ const consultarApi=async()=>{
     const repuesta2=await fetch(urlimg);
     const regreso2=await repuesta2.json();
 
-   // console.log(respuesta1)
+   console.log(respuesta1)
 
     const fin = performance.now();
-    console.log(`Tiempo de ejecución: ${fin - inicio} milisegundos`);
+    console.log(`A=Tiempo de ejecución: ${fin - inicio} milisegundos`);
 }
+
+consultarApi();
+
 const ConsultarApi2=async()=>{
     const inicio2 = performance.now();
     const [r1, r2] = await Promise.all([fetch(urltext), fetch(urlimg)]);
@@ -24,8 +27,8 @@ const ConsultarApi2=async()=>{
     const reg2 = await r2.json();
 
     const fin2= performance.now();
-    console.log(`Tiempo de respuesta: ${fin2 - inicio2} milisegundos`);
+    console.log(`B=Tiempo de respuesta: ${fin2 - inicio2} milisegundos`);
     
+    console.log(reg2);
 }
-consultarApi();
 ConsultarApi2();

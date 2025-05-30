@@ -52,7 +52,7 @@ const consultarApi=async()=>{
     const repuesta2=await fetch(urlimg);
     const regreso2=await repuesta2.json();
 
-   // console.log(respuesta1)
+   console.log(respuesta1)
 
     const fin = performance.now();
     console.log(`A=Tiempo de ejecución: ${fin - inicio} milisegundos`);
@@ -70,5 +70,6 @@ const ConsultarApi2=async()=>{
     const fin2= performance.now();
     console.log(`B=Tiempo de respuesta: ${fin2 - inicio2} milisegundos`);
     
+    console.log(reg2);
 }
 ConsultarApi2();
